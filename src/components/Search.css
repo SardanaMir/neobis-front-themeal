@@ -1,0 +1,31 @@
+.searchInput{
+    width: 324px;
+    height: 54px;
+    background-color: #DCDCDC;
+    border: none;
+    display: block;
+    margin: 0 auto; 
+    border-radius: 5px;
+
+}
+.searchBtn{
+    width: 127px;
+    height: 54px;
+    background-color: #D49726;
+    border: none;
+    color: #fff;
+    margin-top: 30px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.searchBlock{
+    align-items: center;
+    display: flex;
+    height: 46px;
+    justify-content: center;
+    margin: 0 auto 40px;
+    position: relative;
+    width: 360px;
+
+}
