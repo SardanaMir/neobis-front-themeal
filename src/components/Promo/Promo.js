@@ -12,7 +12,7 @@ function Promo() {
                     <p className='promo__descr'>Breakfast | American</p>
                 </div>
                 <div>
-                    <img src={img} alt="meal" />
+                    <img src='https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg' alt="meal" />
                 </div>
             </div>
         </div>
