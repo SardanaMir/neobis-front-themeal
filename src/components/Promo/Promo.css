@@ -20,19 +20,23 @@
     text-align: center;
 }
 .container{
-    /* width: 1020px; */
-    display: flex;
-    justify-content: center;
-    /* height: 100vh; */
-    align-items: center;
-    gap: 70px;
-    margin-top: 80px;
+    width: 1150px;
+    display: block;
+    margin: 0 auto;
 }
-/* .promo__block{
-} */
+.promo__block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
 img{
     border-radius: 8px;
     box-shadow: 10px 12px 29px -14px rgba(0,0,0,.75);
     object-fit: cover;
-    width: 70%;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
 }

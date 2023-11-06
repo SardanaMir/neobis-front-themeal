@@ -1,0 +1,22 @@
+.recipe__img img{
+    width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+.fl{
+    display: flex;
+    justify-content: space-between;
+}
+.btnYoutube{
+    width: 120px;
+    height: 35px;
+    border: none;
+    background-color: #D49726;
+    border-radius: 10px;
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,22 +1,39 @@
 import React from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import './Promo.css';
-const img = './img/test.jpg';
 
 function Promo() {
+    const [meals, setMeals] = useState([]);
+    const apiUrl = 'https://www.themealdb.com/api/json/v1/1/random.php';
+    
+    useEffect(() => {
+    axios.get(apiUrl).then((repos) => {
+        setMeals(repos.data.meals);
+    });
+    }, []);
+
     return (
         <div className='promo'>  
-            <div className="container">
-                <div className='promo__block'>
+          <div className="container">
+            {meals.length > 0 ? (
+            <div className='promo__block'>
+                <div>
                     <p className='subtitle'>Meal of the day</p>
-                    <h2 className='promo__title'>Fruit and Cream Cheese Breakfast Pastries</h2>
-                    <p className='promo__descr'>Breakfast | American</p>
+                    <h2 className='promo__title'>{meals[0].strMeal}</h2>
+                    <p className='promo__descr'>{meals[0].strCategory} | {meals[0].strArea}</p>
                 </div>
                 <div>
-                    <img src='https://www.themealdb.com/images/media/meals/urzj1d1587670726.jpg' alt="meal" />
+                    <img src={meals[0].strMealThumb} alt="meal" />
                 </div>
             </div>
+            ) : (
+            <p>Loading...</p>
+            )}
+          </div>
         </div>
-    );
-  }
+      );
+
+}
   
 export default Promo;

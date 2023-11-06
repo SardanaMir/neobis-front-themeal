@@ -1,7 +1,6 @@
-import React from 'react';
-import Header from './Header/Header'
-import Promo from './Promo/Promo'
-import Search from './Search'
+import Header from './Header/Header';
+import Search from './Search';
+import Promo from './Promo/Promo';
 
 function MainPage() {
     return (
