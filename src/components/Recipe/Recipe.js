@@ -3,27 +3,27 @@ import Header from '../Header/Header';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './Recipe.css';
+
 function Recipe() {
     const { id } = useParams();
     const [recipe, setRecipe] = useState([]);
     
     useEffect(() => {
-        const apiUrl1 = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id;
-        axios.get(apiUrl1).then((response) => {
+        const API_URL = 'https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + id;
+        axios.get(API_URL).then((response) => {
             setRecipe(response.data.meals[0]);
         });   
     }, []);
-    console.log(recipe);
 
     return (
-        <div>
+        <div className='recipe'>
             <Header/>
             <div className="container">
-                <div className='recipe'>
-                    <h2 className='promo__title' id={recipe.idMeal}>{recipe.strMeal}</h2>
-                    <p className='promo__descr'>{recipe.strCategory} | {recipe.strArea}</p>
-                    <div className='fl'>
-                        <div className="ingredients">
+                <div>
+                    <h2 className='title' id={recipe.idMeal}>{recipe.strMeal}</h2>
+                    <p className='descr'>{recipe.strCategory} | {recipe.strArea}</p>
+                    <div className='fl-ai-cen recipe__block'>
+                        <div>
                             {Object.keys(recipe)
                             .filter((item) => item.includes("strIngredient") && recipe[item])
                             .map((item, idx) => (
@@ -39,13 +39,12 @@ function Recipe() {
 
                 </div>
 
-                <div>
+                <div className='instruction'>
                     <h2>Instruction</h2>
-                    <p>{recipe.strInstructions}</p>
+                    <p className='descr'>{recipe.strInstructions}</p>
                     <button className='btnYoutube'><a href={recipe.strYoutube}>Watch on Youtube</a></button>
                 </div>
             </div>
-
         </div>
     );
   }

@@ -3,20 +3,22 @@
     display: block;
     margin: 0 auto;
 }
-
-.fl{
-    display: flex;
+.recipe__block{
     justify-content: space-between;
 }
 .btnYoutube{
-    width: 120px;
-    height: 35px;
+    display: block;
+    width: 150px;
     border: none;
     background-color: #D49726;
     border-radius: 10px;
     cursor: pointer;
+    padding: 10px;
+    margin: 30px auto;
 }
-a {
-    text-decoration: none;
-    color: white;
+.instruction{
+    margin-top: 30px;
+}
+.recipe{
+    height: 100vh;
 }

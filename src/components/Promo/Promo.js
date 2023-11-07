@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './Promo.css';
+import { Link } from 'react-router-dom';
 
 function Promo() {
     const [meals, setMeals] = useState([]);
@@ -20,11 +21,15 @@ function Promo() {
             <div className='promo__block'>
                 <div>
                     <p className='subtitle'>Meal of the day</p>
-                    <h2 className='promo__title'>{meals[0].strMeal}</h2>
-                    <p className='promo__descr'>{meals[0].strCategory} | {meals[0].strArea}</p>
+                    <Link to={{ pathname: `/${meals[0].idMeal}`}}>
+                      <h2 className='title'>{meals[0].strMeal}</h2>
+                    </Link>
+                    <p className='descr'>{meals[0].strCategory} | {meals[0].strArea}</p>
                 </div>
                 <div>
-                    <img src={meals[0].strMealThumb} alt="meal" />
+                <Link to={{ pathname: `/${meals[0].idMeal}`}}>
+                  <img src={meals[0].strMealThumb} alt="meal" />
+                </Link>
                 </div>
             </div>
             ) : (

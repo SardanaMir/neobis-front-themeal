@@ -1,5 +1,5 @@
 import Header from './Header/Header';
-import Search from './Search';
+import Search from './Search/Search';
 import Promo from './Promo/Promo';
 
 function MainPage() {
