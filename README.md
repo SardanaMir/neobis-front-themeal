@@ -11,7 +11,7 @@ For example, I'd like to find some salad recipe. And the page shows you availabl
 
 In the recipe page you find the photo of meal, a list of ingredients, instruction and a button with instruction on the Youtube.<br>
 ![2023-11-08_20-09-45](https://github.com/SardanaMir/neobis-front-themeal/assets/134269662/ade509b7-4c0a-4612-9aa1-755e2d0ce60b)
-Enjoy!
+<br>Enjoy!
 
 Created by Sardana Dordzhieva
 E-mail: sardanadord@yandex.ru
